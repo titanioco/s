@@ -1,0 +1,94 @@
+.container__parallax{
+    background-image:url('../../assets/greenhouse.webp');
+    background-size: cover;
+    background-blend-mode: color;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:var(--background-color);
+    height: 100%;
+    min-height: 500px;
+    overflow-y: visible;
+    position: relative;
+    padding: 5rem 0 10rem 0;
+    text-align: center;
+    width: 100%; 
+}
+.container.cntct__cntnr{
+    width: 58%;
+    display: grid;
+    grid-template-columns: 30% 50%;
+    gap: 12%;
+}
+
+.cntct__op{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.cntct__artc{
+    background: var(--color-varsec);
+    padding: 1.2rem;
+    border-radius: 1.2rem;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.cntct__artc:hover{
+    background: var(--color-varprimary);
+    border-color: var(--color-varbckg);
+
+}
+  
+.cntct__artc-icon{
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-primary);
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 1.5rem;
+}
+
+/*================== Form ================*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background: var(--color-varprimary);
+    border: 2px solid var(--color-primary);
+    resize: none;
+    color: var(--color-primary);
+}
+
+/*=================== Wiggle Motion css =========== */
+@media(prefers-reduced-motion: no-preference){
+    .cntct__artc:hover > .cntct__artc-icon{
+        animation: wiggle infinite 2s linear;
+    }
+}
+
+
+
+/* ====================== Medium Devices/ Tablets  ========================*/
+@media screen and (max-width:1024px){
+    .container.cntct__cntnr{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+/* ====================== Small Devices/ Phones  ========================*/
+@media screen and (max-width:600px){
+    .container.cntct__cntnr{
+        width: var(--container-width-sm);
+    }
+}

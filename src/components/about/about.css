@@ -1,0 +1,154 @@
+.about__container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+.about__us {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    display: grid;
+    place-items: center;
+    border: 1px solid;
+    border-color: var(--color-varprimary);
+    background: transparent;
+    transition: var(--transition);
+
+}
+
+.about__us:hover{
+    background:#c5dafe64;
+    border-color: var(--color-varbckg);
+    cursor: default;
+    transition: var(--transition);
+}
+.about__us:hover > .about__img{
+    animation: wiggle infinite 2s linear;
+}
+
+.about__img{
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.about__card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.about__cardsq{
+    background: var(--color-varsec);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.about__cardsq:hover{
+    background: var(--color-varprimary);
+    border-color: var(--color-varbckg);
+    cursor: default;    
+}
+
+.about__cardsq:hover > .about__icon{
+    animation: wiggle infinite 2s linear;
+}
+
+
+.about__icon{
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.about__cardsq h5{
+    font-size: 0.95rem;
+}
+
+.about_cardsq small {
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.about__content p {
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+}
+
+.about__cardft{
+    /*background: var(--color-varsec);*/
+    border: 1px solid transparent;
+    font-weight: 500;
+}
+
+/* ====================== Medium Devices/ Tablets  ========================*/
+@media screen and (max-width:1024px){
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .about__us{
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+    .about__content{
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+/* ====================== Small Devices/ Phones  ========================*/
+@media screen and (max-width:600px){
+    .about__us{
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+    .about__card{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .about__content{
+        text-align: center;
+    }
+    .about__content p{
+        margin: 1.5rem 0;
+    }
+}
+
+
+/*=================== Wiggle Motion css =========== */
+@media (prefers-reduced-motion: no-preference) {
+    .about__img:hover {
+      animation: wiggle infinite 2s linear;
+    }
+    .about__icon:hover{
+        animation: wiggle infinite 2s linear;
+    }  
+}
+
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+  

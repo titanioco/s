@@ -1,0 +1,68 @@
+footer{
+    background:var(--color-varsec);
+    padding: 3rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 7rem;
+}
+
+footer a{
+    color: var(--color-bckg);
+}
+
+.ft__logo{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+.permalinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto 3rem;
+}
+
+.ft__social{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.ft__social a{
+    background: var(--color-bckg);
+    color: var(--color-varsec);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    display: flex;
+    border: 1px solid transparent;
+}
+
+.ft__social a:hover{
+    background: transparent;
+    color: var(--color-bckg);
+    border-color: var(--color-bckg);
+}
+
+.ft__cpyr{
+    margin-bottom: 4rem;
+    color: var(--color-bckg);
+}
+
+
+/* ====================== Medium Devices/ Tablets  ========================*/
+@media screen and (max-width:1024px){ }
+
+/* ====================== Small Devices/ Phones  ========================*/
+@media screen and (max-width:600px){
+    .permalinks{
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .ft__social{
+        margin-bottom: 2.6rem;
+    }
+}

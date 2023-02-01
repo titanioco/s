@@ -1,0 +1,53 @@
+.container.rvw__container{
+    width: 40%;
+    padding-bottom: 4rem;
+}
+
+.cx__pic{
+    width: 4rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    border: 0.4rem solid var(--color-varbckg);
+}
+
+.commnt{
+    background: var(--color-varsec);
+    text-align: center;
+    font-weight: 400;
+    display: block;
+    border-radius: 2rem;
+    user-select: none;
+}
+
+.cx__rvw{
+    color: var(--color-varbckg);
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: 0.8rem auto 0;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    background: var(--color-primary);
+}
+
+/* ====================== Medium Devices/ Tablets  ========================*/
+@media screen and (max-width:1024px){
+    .container.rvw__container{
+        width: 60%;
+    }
+}
+
+/* ====================== Small Devices/ Phones  ========================*/
+@media screen and (max-width:600px){
+    .container.rvw__container{
+        width: var(--container-width-sm);
+    }
+
+    cx__rvw{
+        width: var(--container-width-sm);
+    }
+}
+

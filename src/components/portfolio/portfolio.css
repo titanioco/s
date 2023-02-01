@@ -1,0 +1,163 @@
+.portfolio__cont{
+    background-image:url('../../assets/Paramo1.webp');
+    background-size: cover;
+    background-blend-mode: color;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    min-height:450px;
+    overflow-y: visible;
+    position: relative;
+    text-align: center;
+    width: 100%; 
+}
+.portfolio__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5;
+}
+
+.portfolio__itm{
+    background: var(--color-varprimary);
+    padding: 1.3rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    
+}
+
+.portfolio__itm:hover{
+    background: var(--color-varsec);
+    border-color: var(--color-varbckg);
+}
+
+.portfolio__itm:hover > h3{
+    color:var(--color-varbckg)
+}
+.portfolio__itm-img{
+    border-radius: 1.5rem;    
+}
+
+.portfolio__itm h3{
+    align-self: auto;
+    margin: 1.5rem 0 2rem;
+    color: var(--color-primary);
+}
+
+.portfolio__itm-img{
+    display: flex;
+    gap: 0rem;
+    margin-bottom: 1rem;
+}
+
+/*==================animation cards 2===========================*/
+
+.card:hover .face.face1 .content{
+    opacity: 0%;
+    transition: 0.5s;
+}
+
+.card .face.face1.content .portfolioh3{
+    margin: 10px 0 0;
+    padding: 15px;
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: #c5dafe;
+}
+
+.card:hover .card .face.face2 {
+    transform: translateY(0);
+}
+
+.card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.card .face.face2 .content a{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: rgb(75, 189, 89);
+    padding: 5px;
+    border: 1px solid rgb(75, 189, 89);
+}
+
+.card .face.face2 .content a:hover{
+    background: var(--color-varprimary);
+    color: #fff;
+}
+
+.card{
+    position: flex;
+    cursor: pointer;
+}
+
+.card .face{
+    display: flex;
+    transition: 0.5s;
+}
+
+.card .face.face1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    background-position:top;
+    
+}
+
+.card:hover .face.face1{
+    background-position:bottom;
+    opacity: 0.5;
+    transform: translateY(0);
+    transition: 1.5s;
+    
+}
+
+.card:hover .face.face1.f1 {
+    background-image: url('../../assets/greenwall.webp');
+    transition: 0.5s;
+}
+
+
+.card:hover .face.face1.f2 {
+    background-image: url('../../assets/garden.webp');
+    transition: 0.5s;
+}
+
+.card:hover .face.face1.f3 {
+    background-image: url('../../assets/artdeco.webp');
+    transition: 0.5s;
+}
+.card .face.face1 .content{
+    opacity: 0.9;
+}
+
+/* ====================== Medium Devices/ Tablets  ========================*/
+@media screen and (max-width:1024px){
+    .portfolio__container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1.2rem;
+    }
+    .card .face{
+        width: 300px;
+        height: 250px;
+        
+        transition: 0.5s;
+    }
+    
+}
+
+/* ====================== Small Devices/ Phones  ========================*/
+@media screen and (max-width:600px){
+    .portfolio__container{
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+    }
+}
